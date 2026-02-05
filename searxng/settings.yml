@@ -3,7 +3,6 @@ use_default_settings:
   engines:
     keep_only:
       - 1337x
-      - 9gag
       - adobe stock
       - adobe stock audio
       - adobe stock video
@@ -200,12 +199,6 @@ engines:
     disabled: false
     categories: ["files"]
     weight: 2
-    timeout: 10
-
-  - name: 9gag
-    categories: ["images", "social media", "general"]
-    weight: 0.5
-    disabled: false
     timeout: 10
 
   - name: adobe stock
