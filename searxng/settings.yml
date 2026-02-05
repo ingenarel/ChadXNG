@@ -149,6 +149,14 @@ general:
   donation_url: "https://www.patreon.com/c/ingenarelNeoJesus"
   enable_metrics: false
 
+ui:
+  center_alignment: true
+  theme_args:
+    simple_style: dark
+    results_on_new_tab: true
+    hotkeys: vim
+    url: full
+
 search:
   safe_search: 0
   favicon_resolver: "duckduckgo"
