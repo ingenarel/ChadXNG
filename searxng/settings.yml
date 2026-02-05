@@ -145,7 +145,7 @@ redis:
 
 general:
   debug: false
-  instance_name: "SearXNG"
+  instance_name: "ChadXNG"
   donation_url: "https://www.patreon.com/c/ingenarelNeoJesus"
   enable_metrics: false
 
