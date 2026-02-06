@@ -21,18 +21,20 @@ A custom SearXNG config that:
 | Twitter | nitter.net |
 | Genius | intellectual.catsarch.com |
 
-# blacklists:
+# Domains:
+
+### blacklists:
 - Deepwiki 
+- Grokipedia
 - All `.ai` domains (sorry Anguilla)
 - nixos.wiki (official wiki.nixos.org exists)
 - elderscrolls.fandom.com (UESP better and fuck fandom)
 - fallout.fandom.com (fallout.wiki better and fuck fandom)
 - minecraft.fandom.com (minecraft.wiki better and fuck fandom)
 
-# high priority:
+### high priority:
 
 - Wikipedia
-
 
 For more info on how stuff is handled, just check out the settings.yml file 
 
