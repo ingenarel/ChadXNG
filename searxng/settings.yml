@@ -64,7 +64,6 @@ use_default_settings:
       - metacpan
       - minecraft wiki
       - mixcloud
-      - mojeek
       - mojeek images
       - mojeek news
       - nixos wiki
@@ -91,10 +90,6 @@ use_default_settings:
       - public domain image archive
       - pubmed
       - pypi
-      - qwant
-      - qwant images
-      - qwant news
-      - qwant videos
       - reddit
       - repology
       - reuters
@@ -107,9 +102,6 @@ use_default_settings:
       - sourcehut
       - springer nature
       - stackoverflow
-      - startpage
-      - startpage images
-      - startpage news
       - steam 
       - superuser
       - svgrepo
@@ -519,11 +511,6 @@ engines:
     disabled: false
     timeout: 10
 
-  # - name: mojeek
-  #   categories: ["general"]
-  #   disabled: false
-  #   timeout: 10
-
   - name: mojeek images
     categories: ["images"]
     disabled: false
@@ -655,25 +642,6 @@ engines:
     disabled: false
     timeout: 10
 
-  - name: qwant
-    categories: ["general"]
-    disabled: false
-    timeout: 10
-
-  - name: qwant images
-    categories: ["images"]
-    disabled: false
-    timeout: 10
-
-  - name: qwant news
-    categories: ["news"]
-    disabled: false
-    timeout: 10
-
-  - name: qwant videos
-    disabled: false
-    timeout: 10
-
   - name: reddit
     disabled: false
     timeout: 10
@@ -719,18 +687,6 @@ engines:
     timeout: 10
 
   - name: stackoverflow
-    disabled: false
-    timeout: 10
-
-  - name: startpage
-    disabled: false
-    timeout: 10
-
-  - name: startpage images
-    disabled: false
-    timeout: 10
-
-  - name: startpage news
     disabled: false
     timeout: 10
 
