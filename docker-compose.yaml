@@ -41,16 +41,23 @@ services:
     ports:
       - "127.0.0.1:8080:8080"
     volumes:
-      # - ./searxng:/etc/searxng:rw
+      - ./searxng:/etc/searxng
+      # - ./Pictures/banner.png:/usr/local/searxng/searx/static/themes/simple/img/searxng.png
+      - ./simple-custom-fork:/usr/local/searxng/searx/static/themes/simple
       - searxng-data:/var/cache/searxng:rw
     environment:
       - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
       - SEARXNG_SECRET=$SEARXNG_SECRET
     develop:
       watch:
-        - action: sync+restart
-          path: ./searxng
-          target: /etc/searxng
+        # - action: sync+restart
+        #   path: ./searxng
+        #   target: /etc/searxng
+        # - action: sync+restart 
+        #   path: ./simple-custom-fork
+        #   target: /usr/local/searxng/searx/static/themes/simple
+        - action: restart
+          path: ./docker-compose.yaml
     # logging:
     #   driver: "json-file"
     #   options:

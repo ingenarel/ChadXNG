@@ -144,7 +144,6 @@ general:
 ui:
   center_alignment: true
   theme_args:
-    simple_style: dark
     results_on_new_tab: true
     hotkeys: vim
     url: full
