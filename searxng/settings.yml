@@ -150,7 +150,7 @@ ui:
 
 search:
   safe_search: 0
-  favicon_resolver: "duckduckgo"
+  favicon_resolver: ""
   max_page: 0
   default_lang: "en"
 
