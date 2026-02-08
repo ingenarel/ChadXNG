@@ -11,11 +11,6 @@ services:
     environment:
       - SEARXNG_HOSTNAME=${SEARXNG_HOSTNAME:-http://localhost}
       - SEARXNG_TLS=${LETSENCRYPT_EMAIL:-internal}
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
 
   valkey:
     container_name: valkey
@@ -26,11 +21,6 @@ services:
       - searxng
     volumes:
       - valkey-data2:/data
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
 
   searxng:
     container_name: searxng
@@ -42,7 +32,6 @@ services:
       - "127.0.0.1:8080:8080"
     volumes:
       - ./searxng:/etc/searxng
-      # - ./Pictures/banner.png:/usr/local/searxng/searx/static/themes/simple/img/searxng.png
       - ./simple-custom-fork:/usr/local/searxng/searx/static/themes/simple
       - searxng-data:/var/cache/searxng:rw
     environment:
@@ -50,19 +39,14 @@ services:
       - SEARXNG_SECRET=$SEARXNG_SECRET
     develop:
       watch:
-        # - action: sync+restart
-        #   path: ./searxng
-        #   target: /etc/searxng
-        # - action: sync+restart 
-        #   path: ./simple-custom-fork
-        #   target: /usr/local/searxng/searx/static/themes/simple
+        - action: sync+restart
+          path: ./searxng
+          target: /etc/searxng
+        - action: sync+restart 
+          path: ./simple-custom-fork
+          target: /usr/local/searxng/searx/static/themes/simple
         - action: restart
           path: ./docker-compose.yaml
-    # logging:
-    #   driver: "json-file"
-    #   options:
-    #     max-size: "1m"
-    #     max-file: "1"
 
 networks:
   searxng:
