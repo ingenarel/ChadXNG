@@ -44,3 +44,5 @@ For more info on how stuff is handled, just check out the settings.yml file
 - copy .env.example file to .env
 - change SEARXNG_SECRET, original README suggested using the string generated from the `openssl rand -hex 32` command
 - run the docker compose
+
+![gallery](Pictures/gallery.png)
