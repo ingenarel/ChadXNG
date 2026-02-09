@@ -578,7 +578,7 @@ engines:
     timeout: 20
 
   - name: pdbe
-    categories: ["general", "resources"]
+    categories: ["resources"]
     disabled: false
     timeout: 20
 
