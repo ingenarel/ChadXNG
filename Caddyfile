@@ -29,9 +29,8 @@
 	}
 }
 
-{$SEARXNG_HOSTNAME}
-
-tls {$SEARXNG_TLS}
+localhost:8888
+tls internal
 
 encode zstd gzip
 
@@ -65,7 +64,7 @@ header {
 
 	# Comment header to allow indexing by search engines
 	X-Robots-Tag "noindex, nofollow, noarchive, nositelinkssearchbox, nosnippet, notranslate, noimageindex"
-    
+
 	# enable HSTS
 	# WARNING: Once this value is set, the site must continue to support HTTPS until the expiry time is reached.
 
